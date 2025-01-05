@@ -57,6 +57,7 @@ def test_login_wrong_password():
 
     try:
         login_page = navigate_to_hudl_login(driver, config)
+        driver.maximize_window()
         user_email = config["DEFAULT"]["USER_EMAIL"]
         wrong_password = "wrong_password123"
 
@@ -86,6 +87,7 @@ def test_login_empty_password():
 
     try:
         login_page = navigate_to_hudl_login(driver, config)
+        driver.maximize_window()
         user_email = config["DEFAULT"]["USER_EMAIL"]
         empty_password = ""
 
@@ -115,6 +117,7 @@ def test_login_empty_email():
 
     try:
         # Navigate to the Hudl login page
+        driver.maximize_window()
         login_page = navigate_to_hudl_login(driver, config)
         empty_email = ""  # Empty email field
 
@@ -144,6 +147,7 @@ def test_login_invalid_email_format():
 
     try:
         # Navigate to the Hudl login page
+        driver.maximize_window()
         login_page = navigate_to_hudl_login(driver, config)
         invalid_email = "guljar.com"  # Invalid email format
 
