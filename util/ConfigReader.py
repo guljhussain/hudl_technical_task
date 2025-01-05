@@ -22,8 +22,8 @@ class ConfigReader:
 
     @staticmethod
     def get_password(config):
-        # encrypted_password = config["DEFAULT"]["ENCRYPTED_PASSWORD"]
-        # secret_key = config["DEFAULT"]["SECRET_KEY"]
-        # fernet = Fernet(secret_key)
-        # return fernet.decrypt(encrypted_password.encode()).decode()
-        return config["DEFAULT"]["PASSWORD"]
+        encrypted_password = config["DEFAULT"]["ENCRYPTED_PASSWORD"]
+        secret_key = config["DEFAULT"]["SECRET_KEY"]
+        fernet = Fernet(secret_key)
+        return fernet.decrypt(encrypted_password.encode()).decode()
+        # return config["DEFAULT"]["PASSWORD"]
